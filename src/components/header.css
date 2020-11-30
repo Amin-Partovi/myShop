@@ -1,0 +1,29 @@
+@font-face{
+    font-family:yekan;
+    src:url("../BYekan/BYekan+ Bold.ttf")
+}
+.exit{
+    margin:0 20px 0 0;
+    cursor: pointer;
+    color:#ff5a47;
+}
+
+.leftMenu{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+*{
+    font-family:yekan;
+}
+
+.myShop{
+    font-size:18px;
+    color:#50d6eb;
+}
+
+.icon{
+    padding:0 10px;
+    color:#50d6eb;
+}

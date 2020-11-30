@@ -1,0 +1,28 @@
+{
+  "myShop": [
+    {
+      "name": "mohammad",
+      "lastName": "partovi",
+      "email": "m.amin.partovi@gmail.com",
+      "password": "3247251669g",
+      "repeatPass": "3247251669g",
+      "id": 1
+    },
+    {
+      "name": "امین",
+      "lastName": "پرتوی",
+      "email": "m@gmail.com",
+      "password": "amin123",
+      "repeatPass": "amin123",
+      "id": 8
+    },
+    {
+      "name": "mohammad",
+      "lastName": "partovi",
+      "email": "sunrise_992@ymail.com",
+      "password": "amin992",
+      "repeatPass": "amin992",
+      "id": 9
+    }
+  ]
+}

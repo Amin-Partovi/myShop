@@ -1,0 +1,51 @@
+@font-face{
+    font-family: yekan;
+    src:url("../BYekan/BYekan+ Bold.ttf")
+}
+
+.detail{
+    margin:auto;
+    width:70%;
+    border:2px solid #dbdbdb;
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.category{
+    right:20px;
+    position: absolute;
+    color:#50d6eb;
+    font-size: 18px;
+}
+
+.picAndPrice{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productPic{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.price{
+    font-size: 40px;
+    color: gray;
+}
+
+.prodTitle{
+    font-size:24px;
+    padding: 10px;
+}
+
+.description{
+    font-size:16px;
+    padding: 5px;
+}
+
+
+
+
+
