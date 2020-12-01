@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect} from 'react';
+import {connect} from 'react-redux';
 
 import ProductCard from './ProductCard';
+import {fetchProducts} from '../../action';
 
 
-const MyShop= ()=>{
+const MyShop= (props)=>{
 
-    const [prodInfo,setProdInfo]=useState([]);
     useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-            .then(res=>res.json())
-            .then(json=>setProdInfo(json))
+        props.fetchProducts();
     },[])
     
-    return (prodInfo.map((product)=>{
+    return (props.products.map((product)=>{
         return (
             <ProductCard header={product.title}
             imgSrc={product.image}
@@ -26,4 +25,8 @@ const MyShop= ()=>{
             
 }
 
-export default MyShop;
+const mapStateToProps=(state)=>{
+    return {products:Object.values(state.products)}
+}
+
+export default connect(mapStateToProps,{fetchProducts})(MyShop);

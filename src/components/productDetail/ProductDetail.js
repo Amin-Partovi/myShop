@@ -1,38 +1,35 @@
 import React,{useState,useEffect} from 'react';
+import {connect} from 'react-redux';
 
+import {fetchProduct} from '../../action'
 import './productDetail.css'
 
 const ProductDetail=(props)=>{
     const productId=props.match.params.id;
-    const [prodInfo,setProdInfo]=useState(null);
-
-
     useEffect(()=>{
-        fetch(`https://fakestoreapi.com/products/${productId}`)
-            .then(res=>res.json())
-            .then(json=>setProdInfo(json))
+        props.fetchProduct(productId)
     },[])
 
-    if(prodInfo){
+    if(props.product){
         return (
             <div className="detail">
                 <div className="category">
-                        {prodInfo.category}
+                        {props.product.category}
                 </div>
                 <div className="picAndPrice">
-                        <img className="productPic" src={prodInfo.image}/>
+                        <img className="productPic" src={props.product.image}/>
                     <div className="price">
-                        {`${prodInfo.price}$`}
+                        {`${props.product.price}$`}
                     </div>
                 </div>
                 
                 <div className="content">
                     <div className="prodTitle">
-                        {prodInfo.title}
+                        {props.product.title}
                     </div>
                     
                     <div className="description">
-                        <p>{prodInfo.description}</p>
+                        <p>{props.product.description}</p>
                     </div>
                         
                 </div>
@@ -49,4 +46,9 @@ const ProductDetail=(props)=>{
     
 }
 
-export default ProductDetail;
+const mapStateToProps=(state,ownProps)=>{
+    const productId=ownProps.match.params.id;
+    return{product:state.products[productId]}
+}
+
+export default connect(mapStateToProps,{fetchProduct})(ProductDetail);

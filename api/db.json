@@ -1,5 +1,5 @@
 {
-  "myShop": [
+  "accounts": [
     {
       "name": "mohammad",
       "lastName": "partovi",
@@ -23,6 +23,26 @@
       "password": "amin992",
       "repeatPass": "amin992",
       "id": 9
+    },
+    {
+      "name": "امین",
+      "lastName": "صالحی",
+      "email": "salehi@gmail.com",
+      "password": "amin12345",
+      "repeatPass": "amin12345",
+      "id": 10
+    },
+    {
+      "email": "m.partovi@gmail.com",
+      "name": "mohammad",
+      "lastName": "partovi",
+      "password": "amin992",
+      "repeatPass": "amin992",
+      "id": 11
     }
+  ],
+
+  "products":[
+
   ]
 }
