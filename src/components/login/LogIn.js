@@ -44,6 +44,6 @@ const LogIn=(props)=>{
 
 const mapStateToProps=(state)=>{
     return{
-    accounts:state.accounts.undefined}
+    accounts:state.accounts}
 }
 export default connect(mapStateToProps,{fetchAccounts,signIn})(LogIn);
