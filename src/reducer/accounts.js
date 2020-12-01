@@ -1,4 +1,3 @@
-import React from 'react';
 
 const accounts=(state=null,action)=>{
     switch(action.type){

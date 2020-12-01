@@ -1,12 +1,12 @@
 import React from 'react';
 import {Router,Route} from 'react-router-dom';
 
-import Header from './Header';
-import MyShop from './MyShop';
-import Registeration from './Registeration';
+import Header from './header/Header';
+import MyShop from './home/MyShop';
+import Registeration from './registeration/Registeration';
 import history from '../history';
-import LogIn from './LogIn';
-import ProductDetail from './ProductDetail';
+import LogIn from './login/LogIn';
+import ProductDetail from './productDetail/ProductDetail';
 
 const App=()=>{
     return (

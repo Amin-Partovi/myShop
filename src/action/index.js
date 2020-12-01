@@ -1,5 +1,5 @@
-import {jsonServer} from '../../apis/jsonServer';
-import history from '../../history';
+import {jsonServer} from '../apis/jsonServer';
+import history from '../history';
 
 export const registeration=(formValues)=>async dispatch=>{
     const response= await jsonServer.post("/myshop",formValues)

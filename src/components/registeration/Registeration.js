@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import RegisterationForm from './RegisterationForm';
-import {registeration,fetchAccounts} from './action';
+import {registeration,fetchAccounts} from '../../action';
 
 
 const Registeration=(props)=>{

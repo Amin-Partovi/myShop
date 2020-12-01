@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import {connect} from 'react-redux';
 
 import LogInForm from './LogInForm';
-import {fetchAccounts,signIn} from './action';
-import history from '../history';
+import {fetchAccounts,signIn} from '../../action';
+import history from '../../history';
 
 
 

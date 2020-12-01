@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {signOut} from './action';
 
+import {signOut} from '../../action';
 import './header.css'
 
 

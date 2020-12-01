@@ -1,4 +1,3 @@
-import React from 'react';
 const INITIAL_STATE={
     isSignedIn:localStorage.getItem("isSignedIn"),
     name:localStorage.getItem("name")
