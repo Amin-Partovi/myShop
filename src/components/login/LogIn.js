@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import LogInForm from './LogInForm';
 import {fetchAccounts,signIn} from '../../action';
 import history from '../../history';
-
+import {ERROR_INVALID_EMAIL_PASS} from '../../constants/errorsAndAlerts';
 
 
 
@@ -27,7 +27,7 @@ const LogIn=(props)=>{
             
         }
         else{
-            alert("ایمیل یا پسورد اشتباه می باشد")
+            alert(ERROR_INVALID_EMAIL_PASS)
         }
 
 

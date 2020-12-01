@@ -1,5 +1,9 @@
 import React,{useEffect} from 'react';
 import {connect} from 'react-redux';
+import {
+    SUCCESS_REG,
+    FAILED_REG
+} from '../../constants/errorsAndAlerts'
 
 import RegisterationForm from './RegisterationForm';
 import {registeration,fetchAccounts} from '../../action';
@@ -15,17 +19,15 @@ const Registeration=(props)=>{
         for (let i=0;i<props.accounts.length;i++){
             emails.push(props.accounts[i].email)
         }
-        console.log(emails)
         let index=emails.indexOf(formValues.email);
 
         if(index==-1 ){
             props.registeration(formValues)
-            alert("ثبت نام با موفقیت انجام شد")
+            alert(SUCCESS_REG)
         }
         else{
-            alert("این ایمیل پیش از این ثبت شده است")
+            alert(FAILED_REG)
         }
-
     }
     
     return(
