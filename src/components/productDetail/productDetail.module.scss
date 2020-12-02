@@ -1,0 +1,57 @@
+@import '../../styles/cssReset';
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+.detail{
+    margin:20px auto;
+    width:70%;
+    border:2px solid $iron;
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+    .category{
+        right:20px;
+        position: absolute;
+        color:$bright-Turquoise;
+        font-size: 18px;
+    }
+    .picAndPrice{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .productPic{
+            max-width: 400px;
+            max-height: 400px;
+        }
+        .price{
+            font-size: 40px;
+            color: gray;
+        }
+    }
+
+}
+
+.prodTitle{
+    font-size:24px;
+    padding: 10px;
+}
+
+.description{
+    font-size:16px;
+    padding: 5px;
+}
+
+.addToBasket{
+    display: flex;
+    flex-direction: row-reverse;
+    .addToBasketBtn{
+        padding: 8px 15px;
+        background-color: $scarlet;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
