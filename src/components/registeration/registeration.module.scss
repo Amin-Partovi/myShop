@@ -1,0 +1,55 @@
+@import '../../styles/cssReset';
+@import '../../styles/colors';
+@import '../../styles/fonts';
+@import '../../styles/formSegment';
+@import '../../styles/field';
+
+.segment{
+    margin:30px auto;
+    @include formSegment();
+    h2{
+        text-align: center;
+        color:$scarlet;
+        font-family: yekan;
+    }
+    .field{
+        @include field();
+    }
+
+    .errorField{
+        @include errorField();
+    }
+
+    .fieldFr{
+        @include fieldFr();
+    }
+
+    .errorFieldFr{
+        @include errorFieldFr();
+    }
+    
+    .redBtn{
+        padding: 10px 30px;
+        background-color: $scarlet;
+        border-radius: 5px;
+        color:$white;
+        cursor: pointer;
+        display:block;
+        margin: 10px auto;
+        font-family: yekan;
+    }
+    .auth{
+        text-align: right;
+        .logIn{
+            margin:0 5px;
+        }
+    }
+    .error{
+        text-align: right;
+        font-family: yekanRegular;
+        color:$scarlet;
+    }
+
+
+
+}

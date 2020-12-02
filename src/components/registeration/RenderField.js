@@ -1,11 +1,26 @@
 import RenderError from './RenderError';
+import styles from './registeration.module.scss';
 
 const RenderField=({label,input,type,meta})=>{
-    const className=`field ${(meta.error && meta.touched)? "error":""}`;
+    let className=null;
+    if (meta.error && meta.touched && type!="input"){
+        className=styles.errorField;
+    }
+    else if(meta.error && meta.touched && type=="input"){
+        className=styles.errorFieldFr;
+    }
+    else if(type!="input"){
+        className=styles.field;
+    }
+    else if(type=="input"){
+        className=styles.fieldFr;
+    }
+
+
     return(
-        <div className={className} style={{textAlign:"right"}}>
+        <div className={className}>
             <label>{label}</label>
-            <input {...input} type={type} style={{textAlign:"right"}}/>
+            <input {...input} type={type}/>
             <div>{RenderError(meta)}</div>
         </div>
     )

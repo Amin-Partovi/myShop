@@ -1,11 +1,12 @@
+import styles from './registeration.module.scss';
+
 const RenderError=({touched,error})=>{
     if (touched && error){
         return (
-            <div className="ui error message">
-                <div className="header">
-                    {error}
-                </div>
+            <div className={styles.error}>
+                {error}
             </div>
+
         )
     }
 }

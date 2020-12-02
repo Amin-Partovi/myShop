@@ -4,6 +4,7 @@ import {Field, reduxForm} from 'redux-form';
 
 import validate from './validate';
 import RenderField from './RenderField';
+import styles from './registeration.module.scss';
 
 
 const RegisterationForm=(props)=>{
@@ -13,16 +14,16 @@ const RegisterationForm=(props)=>{
     }
 
     return (
-        <div className="ui compact segment" style={{margin:"auto", top:"20px", width:"30%"}}>
+        <div className={styles.segment}>
             <h2 style={{textAlign:"center"}}>ثبت نام</h2>
-            <form onSubmit={props.handleSubmit(submit)} className="ui form error">
-                <Field component={RenderField} label="نام" name="name"/>
-                <Field component={RenderField} label="نام خانوادگی" name="lastName"/>
+            <form onSubmit={props.handleSubmit(submit)} className={styles.form}>
+                <Field component={RenderField} type="input" label="نام" name="name"/>
+                <Field component={RenderField} type="input" label="نام خانوادگی" name="lastName"/>
                 <Field component={RenderField} type="email" label="ایمیل" name="email" />
                 <Field component={RenderField} type="password" label="پسورد" name="password" />
                 <Field component={RenderField} type="password" label="تکرار پسورد" name="repeatPass" />
-                <button className="ui red button" style={{display:"block", margin:"10px auto"}}> ایجاد حساب کاربری</button>
-                <div className="filed" style={{textAlign:"right"}}> قبلا ثبت نام کرده اید؟ <Link to="/auth">ورود</Link></div>
+                <button className={styles.redBtn} > ایجاد حساب کاربری</button>
+                <div className={styles.auth} > قبلا ثبت نام کرده اید؟ <Link className={styles.logIn} to="/auth">ورود</Link></div>
             </form>
         </div>
     )

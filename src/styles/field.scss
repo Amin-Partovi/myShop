@@ -1,0 +1,52 @@
+@import '../../styles/cssReset';
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+%field-shared{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding:10px;
+    label{
+        margin:2px 0;
+        font-family: yekanRegular;
+        text-align: right;
+    }
+    input{
+        padding: 0 10px;
+        height: 40px;
+        background-color:$white;
+        border-radius: 5px;
+        border:1px solid $iron;
+    }
+}
+    
+@mixin field(){
+    @extend %field-shared;
+    input{
+        &:focus{
+            box-shadow: $box-shadow-focus;
+        }
+    } 
+}
+
+@mixin errorField(){
+    @extend %field-shared;
+    input{
+        box-shadow: $box-shadow-error;
+    } 
+}
+
+@mixin fieldFr(){
+    @include field();
+    input{
+        text-align:right;
+    }
+}
+
+@mixin errorFieldFr(){
+    @include errorField();
+    input{
+        text-align:right;
+    }
+}

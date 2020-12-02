@@ -24,9 +24,9 @@ const LogInForm=(props)=>{
             <div className={styles.segment}>
                 <h2>ورود</h2>
                 <form onSubmit={props.handleSubmit(onSubmit)} className={styles.form}>
-                    <Field component={renderedField} className={styles.field} type="email" label="ایمیل خود را وارد کنید" name="email"/>
-                    <Field component={renderedField} className={styles.field} type="password" label="پسورد خود را وارد کنید" name="password"/>
-                    <button className={styles.redBtn} style={{display:"block", padding:"10px 40px",margin:"10px auto"}}>ورود</button>
+                    <Field component={renderedField} type="email" label="ایمیل خود را وارد کنید" name="email"/>
+                    <Field component={renderedField} type="password" label="پسورد خود را وارد کنید" name="password"/>
+                    <button className={styles.redBtn} >ورود</button>
                     <div className={styles.rules}>
                         <p>با ورود و یا ثبت نام در سایت شما شرایط و قوانین استفاده از سرویس های سایت و</p>
                         <p> قوانین حریم خصوصی آن را می‌پذیرید</p>
