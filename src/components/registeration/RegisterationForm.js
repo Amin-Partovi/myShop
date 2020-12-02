@@ -15,7 +15,7 @@ const RegisterationForm=(props)=>{
 
     return (
         <div className={styles.segment}>
-            <h2 style={{textAlign:"center"}}>ثبت نام</h2>
+            <h2>ثبت نام</h2>
             <form onSubmit={props.handleSubmit(submit)} className={styles.form}>
                 <Field component={RenderField} type="input" label="نام" name="name"/>
                 <Field component={RenderField} type="input" label="نام خانوادگی" name="lastName"/>
