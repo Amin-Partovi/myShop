@@ -2,11 +2,13 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Field, reduxForm} from 'redux-form';
 
+import styles from './login.module.scss';
+
 const LogInForm=(props)=>{
 
     const renderedField=({label,input,type})=>{
         return(
-            <div className="field" style={{textAlign:"right"}}>
+            <div className={styles.field}>
                 <label>{label}</label>
                 <input {...input} type={type}/>
             </div>
@@ -18,16 +20,19 @@ const LogInForm=(props)=>{
     }
 
     return (
-        <div style={{ display:"flex", alignItems:"center", justifyContent:"center" }}>
-            <div className="ui compact segment" style={{ margin:"100px auto"}}>
-                <h2 style={{textAlign:"center"}}>ورود</h2>
-                <form onSubmit={props.handleSubmit(onSubmit)} className="ui form error" style={{textAlign:"right"}}>
-                    <Field component={renderedField} className="field" type="email" label="ایمیل خود را وارد کنید" name="email"/>
-                    <Field component={renderedField} className="field" type="password" label="پسورد خود را وارد کنید" name="password"/>
-                    <button className="ui red button" style={{display:"block", padding:"10px 40px",margin:"10px auto"}}>ورود</button>
-                    <p>با ورود و یا ثبت نام در سایت شما شرایط و قوانین استفاده از سرویس های سایت و قوانین حریم خصوصی آن را می‌پذیرید</p>
+        <div className={styles.container}>
+            <div className={styles.segment}>
+                <h2>ورود</h2>
+                <form onSubmit={props.handleSubmit(onSubmit)} className={styles.form}>
+                    <Field component={renderedField} className={styles.field} type="email" label="ایمیل خود را وارد کنید" name="email"/>
+                    <Field component={renderedField} className={styles.field} type="password" label="پسورد خود را وارد کنید" name="password"/>
+                    <button className={styles.redBtn} style={{display:"block", padding:"10px 40px",margin:"10px auto"}}>ورود</button>
+                    <div className={styles.rules}>
+                        <p>با ورود و یا ثبت نام در سایت شما شرایط و قوانین استفاده از سرویس های سایت و</p>
+                        <p> قوانین حریم خصوصی آن را می‌پذیرید</p>
+                    </div>
                 </form>
-                <Link className="ui button" to="/registeration" style={{display:"block", padding:"10px 40px",margin:"10px auto"}}>ثبت نام</Link>
+                <Link className={styles.btn} to="/registeration" >ثبت نام</Link>
             </div>
         </div>
     )
