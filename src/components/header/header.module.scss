@@ -1,0 +1,57 @@
+@import '../../styles/cssReset';
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+
+@mixin menuLink(){
+    padding:10px 20px;
+    border-radius: 10px;
+    &:hover{
+        background-color: $Wild-Sand;
+    }
+}
+.segment{
+    margin-top: 10px;
+    height:100px;
+    padding:0 20px;
+    border: 2px solid $iron;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .myShop{
+        font-size:18px;
+        color:$bright-Turquoise;
+        @include menuLink();
+    }
+    .leftMenu{
+        display: flex;
+    }
+}
+
+.wellcome{
+    padding:10px 20px;
+    border-radius: 10px;
+    display: flex;
+    .exit{
+        color:$scarlet;
+        cursor: pointer;
+        margin:0 20px 0 0;
+    }
+}
+
+
+.logIn{
+    @include menuLink();
+    .enterance{
+        margin:0 5px 0 0;
+    }
+}
+
+*{
+    font-family:yekan;
+}
+
+.icon{
+    padding:0 10px;
+    color:#50d6eb;
+}
