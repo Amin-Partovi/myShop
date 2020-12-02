@@ -1,20 +1,20 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-import './productCard.css'
+import styles from './productCard.module.scss';
 
 const ProductCard=(props)=>{
 
     return(
         <Link to={`/detail/${props.id}`} >
-            <div className="productCards" style={{float:"left"}} key={props.id}>
-                <div className="productCard">
-                    <div className="productImage" >
+            <div className={styles.productCards} key={props.id}>
+                <div className={styles.productCard}>
+                    <div className={styles.productImage} >
                             <img src={props.imgSrc} />
                     </div>
-                    <div className="productContent">
-                        <div className="title">{props.header}</div>
-                        <div className="description">
+                    <div className={styles.productContent}>
+                        <div className={styles.title}>{props.header}</div>
+                        <div className={styles.description}>
                             {props.price}
                         </div>
                     </div>
