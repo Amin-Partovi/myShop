@@ -1,0 +1,98 @@
+@import '../../styles/cssReset';
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+%image-shared{
+    height:50%;
+            padding:10px;
+            div{
+                width:100%;
+                height:100%;
+                background-color: $white;
+                border-radius: 10px;
+                padding: 20px;
+                box-sizing: border-box;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    box-sizing: border-box;
+                }
+                .category{
+                    z-index: 1;
+                    position: absolute;
+                    right:0;
+                    bottom:10px;
+                    color:$white;
+                    background-color: $scarlet;
+                    padding: 5px 10px;
+                    border-radius: 5px 0 0  5px;
+                }
+            }
+}
+.container{
+    *{
+        box-sizing: border-box;
+    }
+    height:400px;
+    display: flex;
+    background-color:$Wild-Sand;
+    padding:10px;
+    .categories{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:30%;
+        .jewelery{
+            @extend %image-shared;
+        }
+        .electronics{
+            @extend %image-shared;
+        }
+    }
+        
+    .swipper{
+        background:$white;
+        width: 70%;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+.slider{
+    .slide{
+        img{
+            display: block;
+            margin:auto;
+            max-width: 350px;
+            max-height: 300px;
+        }
+    }
+}
+
+%btn-shared{
+    display:absolute;
+    transform:translateY(-170px);
+    padding:0;
+    background: $white;
+    i{
+        font-size: 22px;
+        background: $white;
+        color:$scarlet;
+    }
+}
+.navBtn{
+    display: flex;
+    justify-content: space-between;
+    .backBtn{
+        @extend %btn-shared;
+    }
+    
+    .nextBtn{
+        @extend %btn-shared;
+    }
+}

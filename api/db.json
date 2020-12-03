@@ -71,6 +71,14 @@
       "password": "niloo123",
       "repeatPass": "niloo123",
       "id": 15
+    },
+    {
+      "password": "farbod123",
+      "name": "فربد",
+      "lastName": "اخلاقی",
+      "email": "akhlaghi@gmail.com",
+      "repeatPass": "farbod123",
+      "id": 16
     }
   ]
 }
