@@ -1,20 +1,28 @@
-@import '../../styles/cssReset';
-@import '../../styles/colors';
-@import '../../styles/fonts';
+@import '../../../styles/cssReset';
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+.container{
+    background-color: $Wild-Sand;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding:10px;
 
+}
 .productCards{
-    width:280px;
+    width:270px;
     height:450px;
     padding:10px;
-    float: left;
+    
 
     .productCard{
+        background-color: $white;
         width: 100%;
         height:100%;
         border: 1px solid $iron;
         border-radius: 10px;
         &:hover{
-            border:1px solid $bright-Turquoise;
+            border:1px solid $scarlet;
         }
         .productImage{
             width: 100%;

@@ -6,6 +6,7 @@
 
 .segment{
     margin:30px auto;
+    background-color: $Wild-Sand;
     @include formSegment();
     h2{
         text-align: center;

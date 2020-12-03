@@ -9,6 +9,7 @@
     .segment{
         margin:100px auto;
         @include formSegment();
+        background-color: $Wild-Sand;
         h2{
             text-align: center;
             color:$scarlet;
@@ -43,7 +44,7 @@
             padding:10px;
             border-radius: 10px;
             &:hover{
-                background-color: $Wild-Sand;
+                background-color: $iron;
             }
         }
     }

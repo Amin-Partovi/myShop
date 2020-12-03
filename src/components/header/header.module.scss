@@ -14,13 +14,14 @@
     margin-top: 10px;
     height:100px;
     padding:0 20px;
-    border: 2px solid $iron;
+    border: 3px solid $Wild-Sand;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 20px 20px 0 0;
     .myShop{
         font-size:18px;
-        color:$bright-Turquoise;
+        color:$scarlet;
         @include menuLink();
     }
     .leftMenu{

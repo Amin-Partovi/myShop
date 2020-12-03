@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import ProductCard from './ProductCard';
-import {fetchProducts} from '../../action';
+import {fetchProducts} from '../../../action';
 
 
 const Products= (props)=>{
