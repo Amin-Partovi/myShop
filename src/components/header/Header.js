@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import RenderLogInBtn from './RenderLogInBtn'
 import styles from './header.module.scss'
+import Search from './Search';
 
 
 
@@ -15,6 +16,7 @@ const Header=()=>{
                 <RenderLogInBtn/>
             </div>
             <div className={styles.rightMenu}>
+                <Search/>
                 <Link to="/" className={styles.myShop}>
                     فروشگاه من    
                 </Link>

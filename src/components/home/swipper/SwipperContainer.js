@@ -36,7 +36,6 @@ const SwipperContainer=(props)=>{
     
 }
 const mapStateToProps=(state)=>{
-    console.log(state.products)
     return {images:state.products}
 }
 

@@ -31,8 +31,8 @@ class Swipper extends React.Component {
           {this.renderSlide()}
         </Slider>
         <div className={styles.navBtn}>
-            <ButtonBack className={styles.backBtn}><i class="chevron left icon"/></ButtonBack>
-            <ButtonNext className={styles.nextBtn}><i class="chevron right icon"/></ButtonNext>
+            <ButtonBack className={styles.backBtn}><i className="chevron left icon"/></ButtonBack>
+            <ButtonNext className={styles.nextBtn}><i className="chevron right icon"/></ButtonNext>
         </div>
       </CarouselProvider>
     );
