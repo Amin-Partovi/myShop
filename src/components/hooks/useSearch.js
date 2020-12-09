@@ -19,15 +19,16 @@ const useSearch=(term,data)=>{
         if(debouncedTerm.length!=0){
             setResults(data.products.filter(product=>product.title.toLowerCase().includes(debouncedTerm)))
             setOpen(true);
+            document.body.addEventListener("click", ()=>{
+                setOpen(false)
+            })
         }
         else{
             setResults([])
         }
     },[debouncedTerm])
 
-    document.body.addEventListener("click", ()=>{
-        setOpen(false)
-    })
+    
 
     return [results,open];
 }
