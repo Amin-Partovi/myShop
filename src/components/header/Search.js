@@ -13,7 +13,7 @@ const Search=(props)=>{
     const [results,open]=useSearch(term,props);
 
     const renderResults=()=>{
-        if(results!=[]){
+        if(results!==[]){
             return(
                 results.map((result)=>
                 <Link to={`/detail/${result.id}`} className={styles.searchTitle} key={result.id}>
@@ -25,14 +25,16 @@ const Search=(props)=>{
     }
     
     return (
-        <React.Fragment>
+        <div className={styles.search}>
             <form className={styles.form} >
-                <input className={styles.search} type="text" placeholder="جستجو" value={term} onChange={e=>setTerm(e.target.value)}/>
+                <input className={styles.searchBar} type="text" placeholder="جستجو" value={term} onChange={e=>setTerm(e.target.value)}/>
             </form>
-            <div className={`${(results.length!=0 && open===true)?styles.searchResults:styles.emptyResult}`}>
-                {renderResults()}
+            <div className={styles.searchResultsContainer}>
+                <div className={`${(results.length!==0 && open===true)?styles.searchResults:styles.emptyResult}`}>
+                    {renderResults()}
+                </div>
             </div>
-        </React.Fragment>
+        </div>
     )
 }
 

@@ -1,6 +1,6 @@
-@import '../../styles/cssReset';
-@import '../../styles/colors';
-@import '../../styles/fonts';
+@import './cssReset';
+@import './colors';
+@import './fonts';
 
 @mixin formSegment(){
     max-width: 500px;

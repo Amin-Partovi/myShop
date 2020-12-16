@@ -10,7 +10,7 @@ const ProductCard=(props)=>{
             <div className={styles.productCards} key={props.id}>
                 <div className={styles.productCard}>
                     <div className={styles.productImage} >
-                            <img src={props.imgSrc} />
+                            <img src={props.imgSrc} alt="product image"/>
                     </div>
                     <div className={styles.productContent}>
                         <div className={styles.title}>{props.header}</div>

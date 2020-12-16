@@ -12,15 +12,13 @@ const Header=()=>{
 
     return (
         <div className={styles.segment}>
-            <div className={styles.leftMenu}>
+            <div className={styles.authMenu}>
                 <RenderLogInBtn/>
             </div>
-            <div className={styles.rightMenu}>
-                <Search/>
-                <Link to="/" className={styles.myShop}>
-                    فروشگاه من    
-                </Link>
-            </div>
+            <Search/>
+            <Link to="/" className={styles.myShop}>
+                فروشگاه من    
+            </Link>
         </div>
     )
 }

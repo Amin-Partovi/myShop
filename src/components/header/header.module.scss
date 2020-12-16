@@ -1,6 +1,7 @@
 @import '../../styles/cssReset';
 @import '../../styles/colors';
 @import '../../styles/fonts';
+@import '../../styles/screenSize';
 
 
 @mixin menuLink(){
@@ -10,90 +11,188 @@
         background-color: $Wild-Sand;
     }
 }
+
 .segment{
-    margin-top: 10px;
-    height:100px;
-    padding:0 20px;
-    border: 3px solid $Wild-Sand;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: yekan;
+    margin-top: 10px;
+    height:10vh;
+    padding:0 20px;
+    border: 3px solid $Wild-Sand;
     border-radius: 20px 20px 0 0;
-    .rightMenu{
-        display: flex;
-        align-items: center;
-        justify-content: right;
-        .myShop{
-            flex:1;
-            font-size:18px;
-            color:$scarlet;
-            @include menuLink();
-        }
+    .myShop{
+        font-size:18px;
+        color:$scarlet;
+        @include menuLink();
+    }
+    .search{
         .form{
-            .search{
+            display: flex;
+            justify-content: flex-end;
+            .searchBar{
                 background-color: $Wild-Sand;
                 text-align: right;
                 font-family: yekanRegular;
                 padding: 8px 15px;
-                margin-right: 10px;
                 border-radius: 10px;
-                width: 400px;
                 &::placeholder{
                     opacity: 0.5;
                 }
             }
         }
-        .searchResults{
-            border-radius: 0 0 10px 10px;
-            position: absolute;
+        .searchResultsContainer{
             display: flex;
-            flex-direction: column;
-            width:400px;
-            overflow: hidden;
-            top:75px;
-            z-index: 1;
-            background:$white;
-            border:1px solid $iron;
-            .searchTitle{
-                padding:10px;
-                margin:0;
-                border:1px solid $Wild-Sand;
-                &:hover{
-                    background-color: $Wild-Sand;
+            justify-content: flex-end;
+            .searchResults{
+                border-radius: 0 0 10px 10px;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                z-index: 2;
+                background:$white;
+                border:1px solid $iron;
+                .searchTitle{
+                    padding:10px;
+                    margin:0;
+                    border:1px solid $Wild-Sand;
+                    &:hover{
+                        background-color: $Wild-Sand;
+                    }
                 }
             }
-        }
-        .emptyResult{
-            display: none;
+            .emptyResult{
+                display: none;
+            }
         }
         
     }
     
-    .leftMenu{
-        display: flex;
-        flex:1;
+    .authMenu{
+        .logIn{
+            @include menuLink();
+            .enterance{
+                margin:0 5px 0 0;
+            }
+        }
+        .wellcome{
+            padding:10px 20px;
+            border-radius: 10px;
+            display: flex;
+            .exit{
+                color:$scarlet;
+                cursor: pointer;
+                margin:0 20px 0 0;
+            }
+        }
     }
 }
 
-.wellcome{
-    padding:10px 20px;
-    border-radius: 10px;
-    display: flex;
-    .exit{
-        color:$scarlet;
-        cursor: pointer;
-        margin:0 20px 0 0;
+
+
+@media screen and (min-width:$lg){
+    .segment{
+        .search{
+            flex: auto;
+            .form{
+                .searchBar{
+                    width:40em;
+                }
+            }
+            .searchResultsContainer{
+                .searchResults{
+                    width:40em;
+                }
+            }
+        }
     }
 }
 
-
-.logIn{
-    @include menuLink();
-    .enterance{
-        margin:0 5px 0 0;
+@media screen and (min-width:$md) and (max-width:$lg){
+    .segment{
+        .search{
+            flex: auto;
+            .form{
+                .searchBar{
+                    width:30em;
+                }
+            }
+            .searchResultsContainer{
+                .searchResults{
+                    width:30em;
+                }
+            }
+        }
     }
 }
 
-*{
-    font-family:yekan;
+@media screen and (min-width:$sm) and (max-width:$md){
+    .segment{
+        .search{
+            flex: auto;
+            .form{
+                .searchBar{
+                    width:25em;
+                }
+            }
+            .searchResultsContainer{
+                .searchResults{
+                    width:25em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:$xs) and (max-width:$sm){
+    .segment{
+        .search{
+            flex: auto;
+            .form{
+                .searchBar{
+                    width:40vw;
+                }
+            }
+            .searchResultsContainer{
+                .searchResults{
+                    width:40vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$xs){
+    .segment{
+        flex-wrap: wrap;
+        height: 15vh;
+        .search{
+            order:3;
+            flex: 100%;
+            .form{
+                display: flex;
+                justify-content: center;
+                .searchBar{
+                    width:80vw;
+                }
+            }
+            .searchResultsContainer{
+                display: flex;
+                justify-content: center;
+                .searchResults{
+                    width:80vw;
+                }
+            }
+        }
+        .myShop{
+            order:2;
+            font-size:14px;
+        }
+        .authMenu{
+            order:1;
+            font-size:14px;
+        }
+    }
 }
