@@ -1,0 +1,142 @@
+@import '../../../styles/cssReset';
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+@import '../../../styles/screenSize';
+
+%image-shared{
+    height:50%;
+    padding:10px;
+    div{
+        width:100%;
+        height:100%;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            box-sizing: border-box;
+        }
+        .category{
+            z-index: 1;
+            position: absolute;
+            right:0;
+            bottom:10px;
+            color:$white;
+            background-color: $scarlet;
+            padding: 5px 10px;
+            border-radius: 5px 0 0  5px;
+        }
+    }
+}
+.container{
+    *{
+        box-sizing: border-box;
+    }
+    height:400px;
+    display: flex;
+    background-color:$Wild-Sand;
+    padding:10px;
+    .categories{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width:30%;
+        .jewelery{
+            @extend %image-shared;
+        }
+        .electronics{
+            @extend %image-shared;
+        }
+    }
+    .swipper{
+        background:$white;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+
+
+@media screen and (min-width:$lg){
+    .container{
+        height:400px;
+        .swipper{
+            width: 70%;
+        }
+    }
+}
+@media screen and (min-width:$md) and (max-width:$lg){
+    .container{
+        height:400px;
+        .swipper{
+            width: 70%;
+        }
+    }
+}
+@media screen and (min-width:$sm) and (max-width:$md){
+    .container{
+        height:350px;
+        .swipper{
+            width: 70%;
+        }
+    }
+}
+@media screen and (min-width:$xs) and (max-width:$sm){
+    .container{
+        height:300px;
+        .swipper{
+            width: 70%;
+        }
+    }
+}
+@media screen and (max-width:$xs){
+    .container{
+        height:350px;
+        flex-direction: column;
+        align-items: center;
+        .swipper{
+            width: 100%;
+            height: 60%;
+        }
+        .categories{
+            flex-direction: row;
+            justify-content: space-around;
+            width:100%;
+            height:40%;
+            .jewelery{
+                width:50%;
+                height: 100%;
+                padding:5px;
+                div{
+                    padding: 10px;
+                    .category{
+                        bottom:0px;
+                        padding: 3px 5px;
+                        background-color: $scarlet;opacity:0.5;
+                    }
+                }
+            }
+            .electronics{
+                width:50%;
+                height: 100%;
+                padding:5px;
+                div{
+                    padding: 10px;
+                    .category{
+                        bottom:0px;
+                        padding: 3px 5px;
+                        background-color: $scarlet;opacity:0.5;
+                    }
+                
+                }
+            }
+        }
+    }
+}

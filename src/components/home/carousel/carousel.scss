@@ -1,0 +1,74 @@
+@import '../../../styles/cssReset';
+@import '../../../styles/colors';
+@import '../../../styles/fonts';
+@import '../../../styles/screenSize';
+
+.slide{
+    height:100%;
+    
+    .carousel-inner{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .carousel-item{
+            max-height: 100%;
+            img{
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:$lg){
+    .carousel-inner{
+        .carousel-item{
+            img{
+                max-width: 300px;
+                max-height: 300px;
+            }
+        }
+    }
+}
+@media screen and (min-width:$md) and (max-width:$lg){
+    .carousel-inner{
+        .carousel-item{
+            img{
+                max-width: 270px;
+                max-height: 270px;
+            }
+        }
+    }
+}
+@media screen and (min-width:$sm) and (max-width:$md){
+    .carousel-inner{
+        .carousel-item{
+            img{
+                max-width: 220px;
+                max-height: 220px;
+            }
+        }
+    }
+}
+@media screen and (min-width:$xs) and (max-width:$sm){
+    .carousel-inner{
+        .carousel-item{
+            img{
+                max-width: 200px;
+                max-height: 200px;
+            }
+        }
+    }
+}
+@media screen and (max-width:$xs) {
+    .carousel-inner{
+        .carousel-item{
+            img{
+                max-width: 140px;
+                max-height: 140px;
+            }
+        }
+    }
+}
+                

@@ -1,11 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Swipper from './Swipper';
-import styles from './swipper.module.scss';
+import ControlledCarousel from './Carousel';
+import styles from './CarouselContainer.module.scss';
 
 
-const SwipperContainer=(props)=>{
+const CarouselContainer=(props)=>{
 
     if(props.images[8] && props.images[13]){
         return (
@@ -25,7 +25,7 @@ const SwipperContainer=(props)=>{
                     </div>
                 </div>
                 <div className={styles.swipper}>
-                    <Swipper/>
+                    <ControlledCarousel/>
                 </div>
             </div>
         )
@@ -39,4 +39,4 @@ const mapStateToProps=(state)=>{
     return {images:state.products}
 }
 
-export default connect(mapStateToProps)(SwipperContainer);
+export default connect(mapStateToProps)(CarouselContainer);

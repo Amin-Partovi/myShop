@@ -167,32 +167,38 @@
 @media screen and (max-width:$xs){
     .segment{
         flex-wrap: wrap;
-        height: 15vh;
+        height: 10vh;
+        justify-content: space-between;
         .search{
             order:3;
             flex: 100%;
             .form{
-                display: flex;
-                justify-content: center;
+                width:100%;
                 .searchBar{
-                    width:80vw;
+                    width:100%;
+                    padding: 5px 10px;
+                    font-size: 12px;
                 }
             }
             .searchResultsContainer{
                 display: flex;
                 justify-content: center;
                 .searchResults{
-                    width:80vw;
+                    width:100%;
                 }
             }
         }
         .myShop{
             order:2;
-            font-size:14px;
+            font-size:12px;
+            padding: 5px 10px;
         }
         .authMenu{
             order:1;
-            font-size:14px;
+            font-size:12px;
+            .logIn{
+                padding: 5px 10px;
+            }
         }
     }
 }
